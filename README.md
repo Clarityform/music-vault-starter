@@ -18,3 +18,13 @@ if __name__ == '__main__':
 
 Flask==2.3.2
 
+services:
+  - type: web
+    name: music-app
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: "python app.py"
+    envVars:
+      - key: PORT
+        value: 10000
