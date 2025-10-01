@@ -25,3 +25,98 @@ def generate():
 
 if __name__ == '__main__':
     app.run(debug=True)  
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eden Music Vault</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎶 Eden Music Vault</h1>
+    <form action="/generate" method="POST">
+      <textarea name="blueprint" placeholder="Paste your Eden music blueprint here..." required></textarea>
+      <button type="submit">Generate Music</button>
+    </form>
+  </div>
+</body>
+</html>
+
+body {
+  font-family: 'Courier New', monospace;
+  background: #0a0a0a;
+  color: #00ffcc;
+  text-align: center;
+  padding: 3rem;
+}
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+textarea {
+  width: 100%;
+  height: 200px;
+  background: #111;
+  color: #0f0;
+  border: 1px solid #00ffcc;
+  padding: 1rem;
+}
+button {
+  background: #00ffcc;
+  border: none;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+body {
+  font-family: 'Courier New', monospace;
+  background: #0a0a0a;
+  color: #00ffcc;
+  text-align: center;
+  padding: 3rem;
+}
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+textarea {
+  width: 100%;
+  height: 200px;
+  background: #111;
+  color: #0f0;
+  border: 1px solid #00ffcc;
+  padding: 1rem;
+}
+button {
+  background: #00ffcc;
+  border: none;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+Flask==2.3.2
+
+# 🎶 Eden Music Vault
+
+A private app to paste Eden blueprints and generate music outputs.
+
+## Deploy Instructions (Render.com)
+
+1. Fork this repo
+2. Create Web Service on Render.com
+3. Use:
+   - Build command: `pip install -r requirements.txt`
+   - Start command: `python server.py`
+4. Secure the page (see notes)
+
+## Notes
+
+- No external API or model is included for now.
+- Music output is symbolic — blueprint remains hidden.
+- You can integrate Magenta, Riffusion, or any MIDI model easily.
