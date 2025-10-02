@@ -1,3 +1,8 @@
-Flask
-requests
-gunicorn
+torch
+torchaudio
+numpy
+scipy
+pillow
+soundfile
+flask
+pydub
