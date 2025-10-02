@@ -1,10 +1,6 @@
 services:
   - type: web
-    name: music-vault-starter
+    name: music-vault
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python app.py
-    autoDeploy: true
-    envVars:
-      - key: REPLICATE_API_TOKEN
-        value: your_replicate_api_token
+    buildCommand: ""
+    startCommand: gunicorn app:app
