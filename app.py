@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 
 # Set your Replicate API key securely
-os.environ["REPLICATE_API_TOKEN"] = "your_replicate_api_token"
+os.environ["REPLICATE_API_TOKEN"] = "your_replicate_api_token"  # Replace with your actual token
 
 @app.route('/')
 def home():
@@ -23,9 +23,10 @@ def generate_music():
             input={"prompt": prompt}
         )
 
-        audio_url = output  # Should return direct .mp3/.wav link
+        audio_url = output  # output should be a direct .mp3/.wav URL
+
         return jsonify({
-            "message": f"🎶 Music generated from: {prompt}",
+            "message": f"🎵 Music generated from: {prompt}",
             "url": audio_url
         })
 
