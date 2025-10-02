@@ -1,8 +1,10 @@
+flask
+pydub
 torch
 torchaudio
 numpy
+Pillow
+matplotlib
 scipy
-pillow
+tqdm
 soundfile
-flask
-pydub
