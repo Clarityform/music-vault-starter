@@ -1,6 +1,6 @@
 import os
 import uuid
-from riffusion.cli import run_txt2im
+from riffusion_full.riffusion.cli import run_txt2im
 from pydub import AudioSegment
 
 def generate_music(prompt: str):
