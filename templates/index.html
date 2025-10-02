@@ -1,9 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Music Generator</title>
+    <title>🎶 AI Music Generator</title>
 </head>
 <body>
-    <h1>🎵 Welcome to your Music Generator!</h1>
+    <h2>🎵 Welcome to your Music Generator!</h2>
+    <form method="POST">
+        <label>Enter your prompt:</label>
+        <input type="text" name="prompt" required>
+        <button type="submit">Generate</button>
+    </form>
+
+    {% if music_path %}
+        <h3>Your generated music:</h3>
+        <audio controls>
+            <source src="{{ music_path }}" type="audio/wav">
+            Your browser does not support audio.
+        </audio>
+    {% endif %}
 </body>
 </html>
