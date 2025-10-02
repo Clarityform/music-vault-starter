@@ -1,2 +1,4 @@
-flask
+Flask==2.2.5
+pydub
+riffusion
 gunicorn
