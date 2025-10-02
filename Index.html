@@ -1,35 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Music Generator</title>
+    <title>Music Generator</title>
 </head>
 <body>
-  <h1>🎵 Enter Prompt to Generate Music</h1>
-  <input id="prompt" placeholder="Describe your music idea" />
-  <button onclick="generate()">Generate</button>
-  <p id="message"></p>
-  <audio id="player" controls style="display:none;"></audio>
-
-  <script>
-    async function generate() {
-      const prompt = document.getElementById("prompt").value;
-      const res = await fetch("/generate", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ prompt })
-      });
-
-      const data = await res.json();
-
-      if (data.url) {
-        document.getElementById("message").innerText = data.message;
-        const player = document.getElementById("player");
-        player.src = data.url;
-        player.style.display = "block";
-      } else {
-        document.getElementById("message").innerText = data.error || "Something went wrong.";
-      }
-    }
-  </script>
+    <h1>🎵 Welcome to your Music Generator!</h1>
 </body>
 </html>
