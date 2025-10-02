@@ -1,7 +1,14 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# Clone Riffusion repo
-git clone https://github.com/hmartiro/riffusion.git riffusion_full
+# Exit on error
+set -o errexit
 
-# Proceed with the rest of the build
+# Optional: echo commands for debugging
+# set -o xtrace
+
+# Install dependencies
+pip install --upgrade pip
 pip install -r requirements.txt
+
+# (Optional) If you need to install other tools, do it here.
+# e.g., if Riffusion needs FFmpeg or other system deps, install here.
