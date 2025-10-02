@@ -1,11 +1,37 @@
+# Core dependencies
+accelerate
+argh
+dacite
+demucs
+diffusers==0.9.0
 flask
+flask_cors
+numpy
+pillow>=9.1.0
+plotly
 pydub
+pysoundfile
+scipy
+soundfile
+sox
+streamlit>=1.18.0
 torch
 torchaudio
-numpy
-Pillow
-matplotlib
-scipy
-tqdm
-soundfile
-argh
+torchvision
+transformers
+
+# Flask app
+uuid
+
+# Riffusion CLI (assuming you cloned the repo in build.sh)
+
+# Type hints and dev tools (optional but useful)
+black
+ipdb
+mypy
+ruff
+types-Flask-Cors
+types-Pillow
+types-requests
+types-setuptools
+types-tqdm
