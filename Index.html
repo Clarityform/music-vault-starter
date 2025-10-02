@@ -20,13 +20,14 @@
       });
 
       const data = await res.json();
+
       if (data.url) {
         document.getElementById("message").innerText = data.message;
         const player = document.getElementById("player");
         player.src = data.url;
         player.style.display = "block";
       } else {
-        document.getElementById("message").innerText = data.error || "Something went wrong";
+        document.getElementById("message").innerText = data.error || "Something went wrong.";
       }
     }
   </script>
