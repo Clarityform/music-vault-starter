@@ -5,3 +5,6 @@ services:
     buildCommand: pip install -r requirements.txt
     startCommand: python app.py
     autoDeploy: true
+    envVars:
+      - key: REPLICATE_API_TOKEN
+        value: your_replicate_api_token
