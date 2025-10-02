@@ -3,7 +3,7 @@ services:
     name: music-app
     env: python
     plan: free
-    buildCommand: ""
+    buildCommand: "pip install -r requirements.txt"
     startCommand: "python app.py"
     envVars:
       - key: PORT
